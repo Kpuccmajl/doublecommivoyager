@@ -48,5 +48,7 @@ void Gui::on_btnInit_clicked()
     for (int i = 0; i < ui->sBox2->value(); i++)
         rightPnts.append(QPoint(qrand()%200+400, qrand()%100+200));
 
+    leftPnts.append(rightPnts.last());
+
     repaint();
 }

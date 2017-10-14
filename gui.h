@@ -6,6 +6,11 @@
 #include <QTime>
 #include <QThread>
 #include <QVector>
+#include <QDebug>
+#include "algorythm.h"
+#include <QFuture>
+#include <QtConcurrentRun>
+#include "results.h"
 
 namespace Ui {
 class Gui;
@@ -23,11 +28,20 @@ public:
     QVector<QPoint> rightPnts;
 
     void drawPoints(QPainter &);
+    void drawCurve(QPainter&, QVector<QPoint>&);
+    QVector<QPoint> calcPath(QVector<QPoint>&);
+
+    QList<int> posledRes, parallRes;
+    bool switcher;
+
+    Results *res;
 
     void paintEvent(QPaintEvent *);
 private slots:
 
     void on_btnInit_clicked();
+
+    void on_btnEx_clicked();
 
 private:
     Ui::Gui *ui;

@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui concurrent
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -14,9 +14,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         gui.cpp \
-    algorythm.cpp
+    algorythm.cpp \
+    results.cpp
 
 HEADERS  += gui.h \
-    algorythm.h
+    algorythm.h \
+    results.h
 
-FORMS    += gui.ui
+FORMS    += gui.ui \
+    results.ui

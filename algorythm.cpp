@@ -17,14 +17,14 @@ void algorythm::search(int x)
             (s + a[x][1] < min))
     {
         min = s + a[x][1];
-        for (int i = 1; i < n; i++)
+        for (int i = 1; i <= n; i++)
         {
             minm[i] = m[i];
         }
     }
     else
     {
-        for (int i = 1; i < n; i++)
+        for (int i = 1; i <= n; i++)
         {
             if ((i != x)&&
                     (a[x][i] != 0) &&
